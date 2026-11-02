@@ -1,0 +1,6 @@
+{% extends "base.html" %}{% block title %}{{ article.title }}{% endblock %}
+{% block content %}
+<section class="section"><div class="container narrow-lg"><p><a href="{{ url_for('health_hub') }}">← All articles</a></p>
+  <article class="card prose"><h1>{{ article.title }}</h1>{% for p in article.body %}<p>{{ p }}</p>{% endfor %}
+  <p class="muted small">General education only. Talk to a doctor about your own health.</p></article></div></section>
+{% endblock %}

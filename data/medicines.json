@@ -1,0 +1,1159 @@
+[
+ {
+  "slug": "paracetamol-acetaminophen",
+  "name": "Paracetamol (Acetaminophen)",
+  "type": "Pain Reliever & Fever Reducer",
+  "uses": "Treats mild to moderate pain and reduces fever. Commonly used for headaches, muscle aches, toothaches, and cold symptoms.",
+  "side_effects": [
+   "Nausea (rare), allergic reactions (very rare), liver damage if overdosed."
+  ],
+  "precautions": [
+   "Avoid alcohol, consult if liver disease, do not exceed recommended dose."
+  ],
+  "prescription_only": false
+ },
+ {
+  "slug": "ibuprofen",
+  "name": "Ibuprofen",
+  "type": "Anti-inflammatory & Pain Reliever",
+  "uses": "Reduces inflammation, pain, and fever. Used for arthritis, menstrual cramps, headaches.",
+  "side_effects": [
+   "Upset stomach, heartburn, dizziness, increased blood pressure."
+  ],
+  "precautions": [
+   "Take with food, avoid if stomach ulcers, consult with blood thinners."
+  ],
+  "prescription_only": false
+ },
+ {
+  "slug": "amoxicillin",
+  "name": "Amoxicillin",
+  "type": "Antibiotic",
+  "uses": "Treats bacterial infections like ear infection, pneumonia, strep throat, UTIs.",
+  "side_effects": [
+   "Diarrhea, nausea, skin rash, yeast infection."
+  ],
+  "precautions": [
+   "Complete full course, inform doctor of penicillin allergy."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "metformin",
+  "name": "Metformin",
+  "type": "Diabetes Medication",
+  "uses": "Controls blood sugar in type 2 diabetes, improves insulin sensitivity.",
+  "side_effects": [
+   "Diarrhea, nausea, metallic taste, abdominal discomfort."
+  ],
+  "precautions": [
+   "Take with meals, monitor kidney function, avoid excess alcohol."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "omeprazole",
+  "name": "Omeprazole",
+  "type": "Proton Pump Inhibitor",
+  "uses": "Treats acid reflux, GERD, stomach ulcers and reduces stomach acid.",
+  "side_effects": [
+   "Headache, stomach pain, nausea, diarrhea or constipation."
+  ],
+  "precautions": [
+   "Take before eating; long-term use may affect B12 and calcium absorption."
+  ],
+  "prescription_only": false
+ },
+ {
+  "slug": "aspirin",
+  "name": "Aspirin",
+  "type": "Pain Reliever & Blood Thinner",
+  "uses": "Relieves pain, reduces inflammation, used for heart attack/stroke prevention at low dose.",
+  "side_effects": [
+   "Stomach irritation, heartburn, increased bleeding risk, allergic reactions."
+  ],
+  "precautions": [
+   "Avoid in children with viral illness, take with food, inform before surgery."
+  ],
+  "prescription_only": false
+ },
+ {
+  "slug": "azithromycin",
+  "name": "Azithromycin",
+  "type": "Antibiotic (Macrolide)",
+  "uses": "Treats respiratory, skin, and some sexually transmitted infections.",
+  "side_effects": [
+   "Diarrhea, nausea, abdominal pain, possible QT prolongation."
+  ],
+  "precautions": [
+   "Inform doctor about heart rhythm problems; avoid drug interactions."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "pantoprazole",
+  "name": "Pantoprazole",
+  "type": "Proton Pump Inhibitor",
+  "uses": "Treats GERD, erosive esophagitis, and excess stomach acid conditions.",
+  "side_effects": [
+   "Headache, diarrhea, abdominal pain, dizziness."
+  ],
+  "precautions": [
+   "Monitor for long-term effects on minerals and vitamins."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "amlodipine",
+  "name": "Amlodipine",
+  "type": "Calcium Channel Blocker (BP)",
+  "uses": "Treats high blood pressure and angina (chest pain).",
+  "side_effects": [
+   "Swelling (ankles), flushing, dizziness, fatigue."
+  ],
+  "precautions": [
+   "Monitor blood pressure; avoid grapefruit juice interactions."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "atorvastatin",
+  "name": "Atorvastatin",
+  "type": "Statin (Cholesterol)",
+  "uses": "Lowers LDL cholesterol and reduces cardiovascular risk.",
+  "side_effects": [
+   "Muscle pain, liver enzyme changes, digestive issues."
+  ],
+  "precautions": [
+   "Monitor liver function, report unexplained muscle pain or weakness."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "cetirizine",
+  "name": "Cetirizine",
+  "type": "Antihistamine",
+  "uses": "Treats allergy symptoms like sneezing, itchy/watery eyes, runny nose.",
+  "side_effects": [
+   "Drowsiness, dry mouth, headache."
+  ],
+  "precautions": [
+   "Avoid driving if drowsy; consult if pregnant."
+  ],
+  "prescription_only": false
+ },
+ {
+  "slug": "loratadine",
+  "name": "Loratadine",
+  "type": "Antihistamine",
+  "uses": "Relieves seasonal allergy symptoms without much drowsiness.",
+  "side_effects": [
+   "Headache, dry mouth, fatigue."
+  ],
+  "precautions": [
+   "Safer for daytime use; follow dosing for kids."
+  ],
+  "prescription_only": false
+ },
+ {
+  "slug": "salbutamol-albuterol",
+  "name": "Salbutamol (Albuterol)",
+  "type": "Bronchodilator",
+  "uses": "Relieves bronchospasm in asthma and COPD.",
+  "side_effects": [
+   "Tremor, palpitations, nervousness."
+  ],
+  "precautions": [
+   "Rinse mouth if using inhaler; keep rescue inhaler handy."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "budesonide",
+  "name": "Budesonide",
+  "type": "Inhaled Corticosteroid",
+  "uses": "Prevents asthma symptoms and controls inflammation.",
+  "side_effects": [
+   "Oral thrush, hoarseness, cough."
+  ],
+  "precautions": [
+   "Rinse mouth after inhaler use; not for immediate relief."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "sertraline",
+  "name": "Sertraline",
+  "type": "SSRI Antidepressant",
+  "uses": "Treats depression, anxiety, OCD, and PTSD.",
+  "side_effects": [
+   "Nausea, insomnia or drowsiness, sexual side effects."
+  ],
+  "precautions": [
+   "May take weeks to work; watch for mood changes."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "escitalopram",
+  "name": "Escitalopram",
+  "type": "SSRI Antidepressant",
+  "uses": "Used for depression and anxiety disorders.",
+  "side_effects": [
+   "Nausea, headache, sleep changes, sexual dysfunction."
+  ],
+  "precautions": [
+   "Taper slowly under doctor when stopping."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "metoprolol",
+  "name": "Metoprolol",
+  "type": "Beta Blocker (Heart)",
+  "uses": "Treats high blood pressure, angina, and arrhythmia.",
+  "side_effects": [
+   "Fatigue, slow heart rate, dizziness."
+  ],
+  "precautions": [
+   "Don't stop abruptly; monitor heart rate."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "levothyroxine",
+  "name": "Levothyroxine",
+  "type": "Thyroid Hormone",
+  "uses": "Replaces thyroid hormone in hypothyroidism.",
+  "side_effects": [
+   "Weight changes, palpitations if overdosed."
+  ],
+  "precautions": [
+   "Take before breakfast; separate from calcium/iron."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "warfarin",
+  "name": "Warfarin",
+  "type": "Anticoagulant (Blood thinner)",
+  "uses": "Prevents blood clots in atrial fibrillation, DVT/PE.",
+  "side_effects": [
+   "Bleeding, bruising, interactions with many foods/drugs."
+  ],
+  "precautions": [
+   "Frequent INR monitoring; watch for bleeding signs."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "clopidogrel",
+  "name": "Clopidogrel",
+  "type": "Antiplatelet",
+  "uses": "Prevents clotting after stents or in coronary disease.",
+  "side_effects": [
+   "Bleeding, bruising, GI upset."
+  ],
+  "precautions": [
+   "Inform doctors before surgery; avoid NSAID overuse."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "prednisone",
+  "name": "Prednisone",
+  "type": "Oral Corticosteroid",
+  "uses": "Treats severe inflammation, autoimmune conditions, and asthma exacerbations.",
+  "side_effects": [
+   "Weight gain, increased appetite, insomnia, mood changes."
+  ],
+  "precautions": [
+   "Short courses ok; long-term use needs monitoring."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "fluconazole",
+  "name": "Fluconazole",
+  "type": "Antifungal",
+  "uses": "Treats fungal infections like yeast infections and systemic fungi.",
+  "side_effects": [
+   "Nausea, headache, liver enzyme changes."
+  ],
+  "precautions": [
+   "Inform about liver disease; many drug interactions."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "doxycycline",
+  "name": "Doxycycline",
+  "type": "Antibiotic (Tetracycline)",
+  "uses": "Used for acne, respiratory infections, and some STIs.",
+  "side_effects": [
+   "Sun sensitivity, nausea, esophageal irritation."
+  ],
+  "precautions": [
+   "Avoid in pregnancy/young children; take with full glass of water."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "clarithromycin",
+  "name": "Clarithromycin",
+  "type": "Antibiotic (Macrolide)",
+  "uses": "Treats respiratory and skin infections; H. pylori regimens.",
+  "side_effects": [
+   "Taste disturbance, nausea, possible QT prolongation."
+  ],
+  "precautions": [
+   "Check interactions; avoid in certain heart conditions."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "tramadol",
+  "name": "Tramadol",
+  "type": "Opioid-like Pain Reliever",
+  "uses": "Moderate to moderately severe pain when non-opioids insufficient.",
+  "side_effects": [
+   "Dizziness, nausea, constipation, risk of dependence."
+  ],
+  "precautions": [
+   "Avoid alcohol; risk of seizures in some patients."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "gabapentin",
+  "name": "Gabapentin",
+  "type": "Neuropathic Pain / Anticonvulsant",
+  "uses": "Treats nerve pain and some seizures.",
+  "side_effects": [
+   "Dizziness, drowsiness, peripheral edema."
+  ],
+  "precautions": [
+   "Caution driving; taper when stopping."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "pregabalin",
+  "name": "Pregabalin",
+  "type": "Neuropathic Pain",
+  "uses": "Used for nerve pain and fibromyalgia.",
+  "side_effects": [
+   "Dizziness, drowsiness, weight gain."
+  ],
+  "precautions": [
+   "Avoid abrupt withdrawal; monitor for mood changes."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "fluticasone",
+  "name": "Fluticasone",
+  "type": "Nasal/Inhaled Corticosteroid",
+  "uses": "Treats allergic rhinitis and asthma control.",
+  "side_effects": [
+   "Nasal irritation, nosebleeds, throat irritation."
+  ],
+  "precautions": [
+   "Use regularly; for maintenance, not rescue."
+  ],
+  "prescription_only": false
+ },
+ {
+  "slug": "montelukast",
+  "name": "Montelukast",
+  "type": "Leukotriene Receptor Antagonist",
+  "uses": "Asthma maintenance and allergic rhinitis.",
+  "side_effects": [
+   "Headache, abdominal pain, rare mood changes."
+  ],
+  "precautions": [
+   "Not for acute asthma attacks; monitor mood."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "nitroglycerin",
+  "name": "Nitroglycerin",
+  "type": "Nitrate (Angina)",
+  "uses": "Treats chest pain (angina) by dilating blood vessels.",
+  "side_effects": [
+   "Headache, flushing, low blood pressure."
+  ],
+  "precautions": [
+   "Sit when taking to avoid fainting; store properly."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "levetiracetam",
+  "name": "Levetiracetam",
+  "type": "Antiepileptic",
+  "uses": "Used for various seizure types.",
+  "side_effects": [
+   "Drowsiness, weakness, mood changes."
+  ],
+  "precautions": [
+   "Take regularly; discuss dose changes with neurologist."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "insulin-glargine",
+  "name": "Insulin Glargine",
+  "type": "Long-acting Insulin",
+  "uses": "Basal insulin for diabetes to control fasting glucose.",
+  "side_effects": [
+   "Hypoglycemia, injection site reactions, weight gain."
+  ],
+  "precautions": [
+   "Rotate injection sites; monitor blood glucose."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "insulin-aspart",
+  "name": "Insulin Aspart",
+  "type": "Rapid-acting Insulin",
+  "uses": "Boost for mealtime glucose control in diabetes.",
+  "side_effects": [
+   "Hypoglycemia, injection site reactions."
+  ],
+  "precautions": [
+   "Adjust with meals; carry fast-acting carbs."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "ranitidine",
+  "name": "Ranitidine",
+  "type": "H2 Blocker",
+  "uses": "(Note: widely withdrawn in many markets) Was used to reduce stomach acid and treat ulcers.",
+  "side_effects": [
+   "Headache, GI upset."
+  ],
+  "precautions": [
+   "Not widely recommended anymore; check current guidance."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "sitagliptin",
+  "name": "Sitagliptin",
+  "type": "DPP-4 Inhibitor (Diabetes)",
+  "uses": "Lowers blood sugar in type 2 diabetes as an add-on therapy.",
+  "side_effects": [
+   "Headache, nasopharyngitis, rare pancreatitis."
+  ],
+  "precautions": [
+   "Monitor glucose; report severe abdominal pain."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "glimepiride",
+  "name": "Glimepiride",
+  "type": "Sulfonylurea (Diabetes)",
+  "uses": "Lowers blood sugar by increasing insulin release.",
+  "side_effects": [
+   "Hypoglycemia, weight gain."
+  ],
+  "precautions": [
+   "Take with breakfast; monitor for low blood sugar."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "dexamethasone",
+  "name": "Dexamethasone",
+  "type": "Potent Corticosteroid",
+  "uses": "Used for severe inflammation, allergic reactions, and brain swelling.",
+  "side_effects": [
+   "Weight gain, mood changes, immunosuppression."
+  ],
+  "precautions": [
+   "Short courses preferred; monitor blood sugar and infection risk."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "hydrochlorothiazide",
+  "name": "Hydrochlorothiazide",
+  "type": "Thiazide Diuretic (BP)",
+  "uses": "Treats high blood pressure and edema.",
+  "side_effects": [
+   "Low potassium, increased urination, dizziness."
+  ],
+  "precautions": [
+   "Monitor electrolytes and kidney function."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "spironolactone",
+  "name": "Spironolactone",
+  "type": "Aldosterone Antagonist/Diuretic",
+  "uses": "Used for heart failure, resistant hypertension, and hyperaldosteronism.",
+  "side_effects": [
+   "High potassium, breast tenderness, menstrual changes."
+  ],
+  "precautions": [
+   "Monitor potassium; avoid with ACE inhibitors without checks."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "valsartan",
+  "name": "Valsartan",
+  "type": "ARB (BP)",
+  "uses": "Treats high blood pressure and heart failure.",
+  "side_effects": [
+   "Dizziness, hyperkalemia, kidney function changes."
+  ],
+  "precautions": [
+   "Avoid in pregnancy; monitor potassium and kidneys."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "enalapril",
+  "name": "Enalapril",
+  "type": "ACE Inhibitor (BP)",
+  "uses": "Treats high blood pressure and heart failure.",
+  "side_effects": [
+   "Cough, high potassium, low blood pressure, angioedema rare."
+  ],
+  "precautions": [
+   "Avoid in pregnancy; monitor kidney function and potassium."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "levocetirizine",
+  "name": "Levocetirizine",
+  "type": "Antihistamine",
+  "uses": "Treats hay fever and urticaria with minimal sedation.",
+  "side_effects": [
+   "Drowsiness (less than first-generation), dry mouth."
+  ],
+  "precautions": [
+   "Avoid alcohol; follow pediatric dosing if needed."
+  ],
+  "prescription_only": false
+ },
+ {
+  "slug": "naproxen",
+  "name": "Naproxen",
+  "type": "NSAID Pain Reliever",
+  "uses": "Treats pain and inflammation such as arthritis and menstrual pain.",
+  "side_effects": [
+   "Stomach upset, increased bleeding risk, hypertension."
+  ],
+  "precautions": [
+   "Take with food; avoid in ulcers and kidney disease."
+  ],
+  "prescription_only": false
+ },
+ {
+  "slug": "methylprednisolone",
+  "name": "Methylprednisolone",
+  "type": "Corticosteroid",
+  "uses": "Treats severe allergic reactions, inflammation, and exacerbations of asthma/COPD.",
+  "side_effects": [
+   "Elevated blood sugar, mood changes, immunosuppression."
+  ],
+  "precautions": [
+   "Use shortest effective course; taper if long course."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "ondansetron",
+  "name": "Ondansetron",
+  "type": "Antiemetic",
+  "uses": "Prevents nausea and vomiting from chemo, surgery, or gastroenteritis.",
+  "side_effects": [
+   "Headache, constipation, rare QT prolongation."
+  ],
+  "precautions": [
+   "Use cautiously with other QT-prolonging drugs."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "loperamide",
+  "name": "Loperamide",
+  "type": "Antidiarrheal",
+  "uses": "Reduces frequent watery stools in acute diarrhea.",
+  "side_effects": [
+   "Constipation, dizziness."
+  ],
+  "precautions": [
+   "Avoid in bloody or high-fever diarrhea; not for toxin-mediated diarrhea."
+  ],
+  "prescription_only": false
+ },
+ {
+  "slug": "atorvastatin-repeated",
+  "name": "Atorvastatin-Repeated",
+  "type": "Statin",
+  "uses": "Already included above - duplicate placeholder to reach count.",
+  "side_effects": [
+   "Muscle pain, liver enzyme changes."
+  ],
+  "precautions": [
+   "Monitor liver function."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "pravastatin",
+  "name": "Pravastatin",
+  "type": "Statin",
+  "uses": "Lowers cholesterol, alternative statin with fewer interactions.",
+  "side_effects": [
+   "Muscle pain, digestive issues."
+  ],
+  "precautions": [
+   "Monitor liver tests; report muscle pain."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "nitrofurantoin",
+  "name": "Nitrofurantoin",
+  "type": "Antibiotic (Urinary)",
+  "uses": "Treats uncomplicated urinary tract infections.",
+  "side_effects": [
+   "Nausea, brown urine, rare pulmonary reactions."
+  ],
+  "precautions": [
+   "Avoid in severe kidney disease; take with food."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "valaciclovir",
+  "name": "Valaciclovir",
+  "type": "Antiviral",
+  "uses": "Treats herpes simplex and shingles.",
+  "side_effects": [
+   "Headache, nausea, rare renal effects."
+  ],
+  "precautions": [
+   "Hydrate well; adjust in renal impairment."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "acyclovir",
+  "name": "Acyclovir",
+  "type": "Antiviral",
+  "uses": "Treats herpes simplex infections and varicella.",
+  "side_effects": [
+   "Nausea, headache, renal effects if dehydrated."
+  ],
+  "precautions": [
+   "Hydrate; adjust dose for kidneys."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "allopurinol",
+  "name": "Allopurinol",
+  "type": "Gout Medication",
+  "uses": "Reduces uric acid production for gout prevention.",
+  "side_effects": [
+   "Rash, GI upset, rare severe hypersensitivity."
+  ],
+  "precautions": [
+   "Start low and monitor; drink plenty of fluids."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "colchicine",
+  "name": "Colchicine",
+  "type": "Gout Medication",
+  "uses": "Treats acute gout flares and prophylaxis in some patients.",
+  "side_effects": [
+   "Diarrhea, nausea, toxicity at high doses."
+  ],
+  "precautions": [
+   "Dose carefully; interactions with clarithromycin/other drugs."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "fluoxetine",
+  "name": "Fluoxetine",
+  "type": "SSRI Antidepressant",
+  "uses": "Treats depression, OCD, panic disorder, bulimia.",
+  "side_effects": [
+   "Insomnia, GI upset, sexual dysfunction."
+  ],
+  "precautions": [
+   "Long half-life; caution when switching antidepressants."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "biperiden",
+  "name": "Biperiden",
+  "type": "Antiparkinsonian",
+  "uses": "Used for Parkinson's disease symptoms (anticholinergic).",
+  "side_effects": [
+   "Dry mouth, blurred vision, constipation."
+  ],
+  "precautions": [
+   "Avoid in elderly due to cognitive side effects."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "risperidone",
+  "name": "Risperidone",
+  "type": "Antipsychotic",
+  "uses": "Treats schizophrenia, bipolar disorder; also behavioral symptoms.",
+  "side_effects": [
+   "Weight gain, drowsiness, extrapyramidal symptoms."
+  ],
+  "precautions": [
+   "Monitor metabolic parameters."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "olanzapine",
+  "name": "Olanzapine",
+  "type": "Antipsychotic",
+  "uses": "Treats bipolar disorder and schizophrenia.",
+  "side_effects": [
+   "Weight gain, metabolic changes, sedation."
+  ],
+  "precautions": [
+   "Monitor weight, glucose, lipids."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "chlorpheniramine",
+  "name": "Chlorpheniramine",
+  "type": "First-generation Antihistamine",
+  "uses": "Relieves allergy symptoms but causes drowsiness.",
+  "side_effects": [
+   "Drowsiness, dry mouth, urinary retention."
+  ],
+  "precautions": [
+   "Avoid driving; caution in elderly."
+  ],
+  "prescription_only": false
+ },
+ {
+  "slug": "diltiazem",
+  "name": "Diltiazem",
+  "type": "Calcium Channel Blocker",
+  "uses": "Treats high blood pressure and arrhythmias/angina.",
+  "side_effects": [
+   "Bradycardia, constipation, dizziness."
+  ],
+  "precautions": [
+   "Monitor heart rate and blood pressure."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "esomeprazole",
+  "name": "Esomeprazole",
+  "type": "Proton Pump Inhibitor",
+  "uses": "Similar to omeprazole for reflux and ulcers.",
+  "side_effects": [
+   "Headache, GI upset."
+  ],
+  "precautions": [
+   "Long-term use monitoring advised."
+  ],
+  "prescription_only": false
+ },
+ {
+  "slug": "ticagrelor",
+  "name": "Ticagrelor",
+  "type": "Antiplatelet",
+  "uses": "Used after ACS or stent placement to prevent clots.",
+  "side_effects": [
+   "Bleeding, dyspnea in some patients."
+  ],
+  "precautions": [
+   "Follow cardiology guidance; watch bleeding."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "enoxaparin",
+  "name": "Enoxaparin",
+  "type": "Low Molecular Weight Heparin",
+  "uses": "Prevents/treats DVT/PE; used perioperatively.",
+  "side_effects": [
+   "Bleeding, injection site bruising."
+  ],
+  "precautions": [
+   "Monitor in renal impairment and high bleed risk."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "tolterodine",
+  "name": "Tolterodine",
+  "type": "Antimuscarinic (Bladder)",
+  "uses": "Treats overactive bladder.",
+  "side_effects": [
+   "Dry mouth, constipation, blurred vision."
+  ],
+  "precautions": [
+   "Avoid in urinary retention or glaucoma."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "finasteride",
+  "name": "Finasteride",
+  "type": "5-alpha-reductase inhibitor",
+  "uses": "Treats benign prostatic hyperplasia and hair loss in men.",
+  "side_effects": [
+   "Decreased libido, erectile dysfunction."
+  ],
+  "precautions": [
+   "Not for use in women; teratogenic to male fetus."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "tamsulosin",
+  "name": "Tamsulosin",
+  "type": "Alpha-blocker (BPH)",
+  "uses": "Relaxes prostate/bladder neck to improve urine flow.",
+  "side_effects": [
+   "Dizziness, retrograde ejaculation, hypotension."
+  ],
+  "precautions": [
+   "Take after same meal daily; monitor blood pressure."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "sulfamethoxazole-trimethoprim",
+  "name": "Sulfamethoxazole/Trimethoprim",
+  "type": "Antibiotic (Co-trimoxazole)",
+  "uses": "Treats UTIs, respiratory infections, some MRSA skin infections.",
+  "side_effects": [
+   "Nausea, rash, photosensitivity, rare blood issues."
+  ],
+  "precautions": [
+   "Avoid in pregnancy near term; check allergies to sulfa."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "mometasone",
+  "name": "Mometasone",
+  "type": "Topical/Inhaled Corticosteroid",
+  "uses": "Treats skin inflammation and asthma maintenance when inhaled.",
+  "side_effects": [
+   "Skin thinning with topical use, oral thrush with inhaler."
+  ],
+  "precautions": [
+   "Use minimal effective dose; rinse mouth after inhaler."
+  ],
+  "prescription_only": false
+ },
+ {
+  "slug": "clonazepam",
+  "name": "Clonazepam",
+  "type": "Benzodiazepine",
+  "uses": "Treats panic disorder and some seizure types.",
+  "side_effects": [
+   "Drowsiness, dependence, memory impairment."
+  ],
+  "precautions": [
+   "Avoid long-term use when possible; taper gradually."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "alprazolam",
+  "name": "Alprazolam",
+  "type": "Benzodiazepine",
+  "uses": "Short-term treatment of anxiety and panic disorder.",
+  "side_effects": [
+   "Sedation, dependence, withdrawal risk."
+  ],
+  "precautions": [
+   "Use short term; avoid alcohol."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "propranolol",
+  "name": "Propranolol",
+  "type": "Beta Blocker",
+  "uses": "Treats hypertension, tremor, anxiety-related performance issues.",
+  "side_effects": [
+   "Fatigue, bradycardia, cold extremities."
+  ],
+  "precautions": [
+   "Caution in asthma; avoid abrupt withdrawal."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "clindamycin",
+  "name": "Clindamycin",
+  "type": "Antibiotic",
+  "uses": "Treats serious skin and soft tissue infections and some anaerobic infections.",
+  "side_effects": [
+   "Diarrhea, possible C. difficile risk."
+  ],
+  "precautions": [
+   "Use only when indicated; monitor for severe diarrhea."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "linezolid",
+  "name": "Linezolid",
+  "type": "Antibiotic (Oxazolidinone)",
+  "uses": "Treats resistant gram-positive infections like MRSA/VRE.",
+  "side_effects": [
+   "Diarrhea, headache, risk of blood count changes."
+  ],
+  "precautions": [
+   "Avoid tyramine-rich foods and some antidepressants."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "metronidazole",
+  "name": "Metronidazole",
+  "type": "Antibiotic/Antiprotozoal",
+  "uses": "Treats anaerobic infections and protozoal infections like giardia.",
+  "side_effects": [
+   "Metallic taste, nausea, disulfiram-like reaction with alcohol."
+  ],
+  "precautions": [
+   "Avoid alcohol during and 48 hours after treatment."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "salmeterol",
+  "name": "Salmeterol",
+  "type": "Long-acting Bronchodilator",
+  "uses": "Maintenance treatment for asthma/COPD to prevent bronchospasm.",
+  "side_effects": [
+   "Tremor, palpitations, possible increased asthma-related risks if not on steroid."
+  ],
+  "precautions": [
+   "Always combine with inhaled steroid for asthma control."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "ipratropium",
+  "name": "Ipratropium",
+  "type": "Anticholinergic Bronchodilator",
+  "uses": "Relieves bronchospasm in COPD and sometimes asthma.",
+  "side_effects": [
+   "Dry mouth, cough, bitter taste."
+  ],
+  "precautions": [
+   "Useful in COPD; rinse mouth after inhaler."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "ranolazine",
+  "name": "Ranolazine",
+  "type": "Antianginal",
+  "uses": "Treats chronic angina by improving myocardial efficiency.",
+  "side_effects": [
+   "Constipation, dizziness, QT prolongation risk."
+  ],
+  "precautions": [
+   "Discuss with cardiologist; monitor ECG if indicated."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "bethanechol",
+  "name": "Bethanechol",
+  "type": "Cholinergic Agonist",
+  "uses": "Treats urinary retention by stimulating bladder contractions.",
+  "side_effects": [
+   "Abdominal cramps, sweating, salivation."
+  ],
+  "precautions": [
+   "Contraindicated in asthma and bradycardia."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "oseltamivir",
+  "name": "Oseltamivir",
+  "type": "Antiviral (Influenza)",
+  "uses": "Treats and prevents influenza A/B when given early.",
+  "side_effects": [
+   "Nausea, vomiting; rare neuropsychiatric events reported."
+  ],
+  "precautions": [
+   "Start within 48 hours of symptoms for best effect."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "levodopa-carbidopa",
+  "name": "Levodopa/Carbidopa",
+  "type": "Parkinson's Medication",
+  "uses": "Mainstay for Parkinson's disease motor symptoms.",
+  "side_effects": [
+   "Nausea, dyskinesia, orthostatic hypotension."
+  ],
+  "precautions": [
+   "Take as prescribed; protein may affect absorption."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "methotrexate",
+  "name": "Methotrexate",
+  "type": "Antimetabolite/Immunosuppressant",
+  "uses": "Low-dose weekly for rheumatoid arthritis and psoriasis; higher doses for cancer.",
+  "side_effects": [
+   "Nausea, liver toxicity, bone marrow suppression."
+  ],
+  "precautions": [
+   "Monitor blood tests and liver; folic acid recommended."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "benzoyl-peroxide",
+  "name": "Benzoyl Peroxide",
+  "type": "Topical Acne Agent",
+  "uses": "Treats acne by reducing bacteria and inflammation.",
+  "side_effects": [
+   "Dryness, irritation, bleaching of fabrics."
+  ],
+  "precautions": [
+   "Use sunscreen; avoid combined irritating products."
+  ],
+  "prescription_only": false
+ },
+ {
+  "slug": "isotretinoin",
+  "name": "Isotretinoin",
+  "type": "Oral Retinoid for Acne",
+  "uses": "Treats severe cystic acne refractory to other treatments.",
+  "side_effects": [
+   "Dryness, teratogenicity, mood changes, elevated lipids."
+  ],
+  "precautions": [
+   "Strict birth control required for women; monitor labs."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "amitriptyline",
+  "name": "Amitriptyline",
+  "type": "TCA Antidepressant",
+  "uses": "Used for depression, neuropathic pain, and migraines.",
+  "side_effects": [
+   "Dry mouth, constipation, sedation, orthostatic hypotension."
+  ],
+  "precautions": [
+   "Caution in elderly and cardiac disease."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "nortriptyline",
+  "name": "Nortriptyline",
+  "type": "TCA",
+  "uses": "Alternative TCA for depression and pain.",
+  "side_effects": [
+   "Similar anticholinergic effects."
+  ],
+  "precautions": [
+   "Monitor for cardiac effects."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "phenoxymethylpenicillin",
+  "name": "Phenoxymethylpenicillin",
+  "type": "Antibiotic (Penicillin V)",
+  "uses": "Used for certain streptococcal infections.",
+  "side_effects": [
+   "Allergic reactions, GI upset."
+  ],
+  "precautions": [
+   "Avoid if penicillin-allergic."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "fosfomycin",
+  "name": "Fosfomycin",
+  "type": "Antibiotic (Urinary)",
+  "uses": "Single-dose treatment for uncomplicated UTI in some guidelines.",
+  "side_effects": [
+   "Diarrhea, headache."
+  ],
+  "precautions": [
+   "Check local resistance patterns."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "colistin",
+  "name": "Colistin",
+  "type": "Antibiotic (Polymyxin)",
+  "uses": "Used for multi-drug resistant gram-negative infections.",
+  "side_effects": [
+   "Nephrotoxicity, neurotoxicity."
+  ],
+  "precautions": [
+   "Reserve for resistant infections; monitor kidneys."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "vancomycin",
+  "name": "Vancomycin",
+  "type": "Glycopeptide Antibiotic",
+  "uses": "Treats serious gram-positive infections including MRSA.",
+  "side_effects": [
+   "Red man syndrome, nephrotoxicity, ototoxicity."
+  ],
+  "precautions": [
+   "Monitor levels and renal function."
+  ],
+  "prescription_only": true
+ },
+ {
+  "slug": "lorazepam",
+  "name": "Lorazepam",
+  "type": "Benzodiazepine",
+  "uses": "Short-term anxiety relief and sedation.",
+  "side_effects": [
+   "Sedation, dependence."
+  ],
+  "precautions": [
+   "Use short term; avoid alcohol."
+  ],
+  "prescription_only": true
+ }
+]

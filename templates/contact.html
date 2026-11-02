@@ -1,0 +1,27 @@
+{% extends "base.html" %}{% block title %}Feedback &amp; Support{% endblock %}
+{% block content %}
+<section class="section"><div class="container">
+  <h1>Support, feedback &amp; FAQ</h1>
+  <div class="alert alert-danger" role="note">🚑 For medical emergencies do not use this form. Call <b>{{ emergency_number }}</b> or <b>{{ ambulance_number }}</b>.</div>
+  <div class="grid cols-2">
+    <div class="card"><h2>Contact information</h2>
+      {% if support.email or support.phone or support.address or support.hours %}
+      <dl class="kv">{% if support.email %}<dt>Email</dt><dd><a href="mailto:{{ support.email }}">{{ support.email }}</a></dd>{% endif %}{% if support.phone %}<dt>Phone</dt><dd><a href="tel:{{ support.phone }}">{{ support.phone }}</a></dd>{% endif %}{% if support.address %}<dt>Address</dt><dd>{{ support.address }}</dd>{% endif %}{% if support.hours %}<dt>Hours</dt><dd>{{ support.hours }}</dd>{% endif %}</dl>
+      {% else %}<p class="muted">Use the form to send us a message. (The site owner can add contact details in the <code>.env</code> file.)</p>{% endif %}
+    </div>
+    <form class="card form" id="contact-form" method="post" action="{{ url_for('contact_post') }}" data-loading><input type="hidden" name="csrf_token" value="{{ csrf_token() }}"><h2>Send us a message</h2>
+      <div class="row2"><div><label for="firstName">First name</label><input id="firstName" name="firstName" required maxlength="80" value="{{ user.first_name if user else '' }}"></div><div><label for="lastName">Last name</label><input id="lastName" name="lastName" maxlength="80" value="{{ user.last_name if user else '' }}"></div></div>
+      <div class="row2"><div><label for="email">Email</label><input id="email" name="email" type="email" required value="{{ user.email if user else '' }}"></div><div><label for="phone">Phone <span class="muted">(optional)</span></label><input id="phone" name="phone" type="tel" maxlength="16"></div></div>
+      <label for="subject">Subject</label><select id="subject" name="subject" required><option value="">Choose…</option><option>Technical support</option><option>Appointment help</option><option>Account help</option><option>Other</option></select>
+      <label for="message">Message</label><textarea id="message" name="message" rows="4" required minlength="10" maxlength="2000"></textarea>
+      <button class="btn btn-primary" type="submit">Send message</button></form>
+  </div>
+  <form class="card form gap-top" id="feedback-form" method="post" action="{{ url_for('feedback_post') }}" data-loading><input type="hidden" name="csrf_token" value="{{ csrf_token() }}"><h2>Share feedback or a suggestion</h2>
+    <div class="row2"><div><label for="category">Type</label><select id="category" name="category" required><option value="suggestion">Suggestion</option><option value="bug">Problem / bug</option><option value="compliment">Compliment</option><option value="other">Other</option></select></div>
+    <div><label for="rating">Rating</label><select id="rating" name="rating"><option value="0">No rating</option><option value="5">★★★★★ Excellent</option><option value="4">★★★★ Good</option><option value="3">★★★ OK</option><option value="2">★★ Poor</option><option value="1">★ Very poor</option></select></div></div>
+    <label for="fb_message">Your feedback</label><textarea id="fb_message" name="message" rows="3" required minlength="5" maxlength="2000"></textarea>
+    <button class="btn btn-primary" type="submit">Submit feedback</button></form>
+  <h2 class="gap-top">Frequently asked questions</h2>
+  <div class="faq">{% for f in faqs %}<details><summary>{{ f.q }}</summary><p>{{ f.a }}</p></details>{% endfor %}</div>
+</div></section>
+{% endblock %}

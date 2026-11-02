@@ -1,0 +1,31 @@
+{% extends "base.html" %}{% block title %}Hospital Finder{% endblock %}
+{% block head %}<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">{% endblock %}
+{% block content %}
+<section class="section"><div class="container">
+  <h1>Hospital finder</h1>
+  <p class="muted">Search a city or area, or use your location. Results come from OpenStreetMap and may be incomplete: please call to confirm details. We never show live bed or doctor availability.</p>
+  <div class="finder">
+    <aside class="card finder-side">
+      <form id="searchForm" class="form">
+        <label for="locationInput">City or area</label>
+        <div class="search-bar slim"><input id="locationInput" placeholder="e.g. Satara, Pune" autocomplete="off"><button class="btn btn-primary" type="submit">Search</button></div>
+        <button class="btn btn-outline btn-block" id="useLocation" type="button">📍 Use my current location</button>
+        <label for="typeSelect">Type</label>
+        <select id="typeSelect"><option value="hospital">Hospitals</option><option value="clinic">Clinics</option><option value="pharmacy">Pharmacies</option></select>
+        <label for="radiusSelect">Search radius</label>
+        <select id="radiusSelect"><option value="3000">3 km</option><option value="5000" selected>5 km</option><option value="10000">10 km</option><option value="20000">20 km</option></select>
+        <fieldset class="facets"><legend>Filter by facility</legend>
+          <label class="check"><input type="checkbox" data-facet="emergency"> Has emergency department</label>
+          <label class="check"><input type="checkbox" data-facet="phone"> Phone number listed</label>
+          <label class="check"><input type="checkbox" data-facet="hours"> Opening hours listed</label>
+          <label class="check"><input type="checkbox" data-facet="website"> Website listed</label>
+        </fieldset>
+      </form>
+      <p class="muted small" id="statusMsg" role="status" aria-live="polite"></p>
+      <div id="results" class="results"></div>
+    </aside>
+    <div class="card map-card"><div id="map" role="application" aria-label="Map of hospitals"></div></div>
+  </div>
+</div></section>
+{% endblock %}
+{% block scripts %}<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="{{ url_for('static', filename='js/hospital.js') }}"></script>{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}{% block title %}Book Appointment{% endblock %}
+{% block content %}
+<section class="section"><div class="container narrow-lg">
+  <h1>Book an appointment</h1><p class="muted">Choose a specialty, date and time. You will get a confirmation straight away.</p>
+  <div class="card">
+    <form method="post" action="{{ url_for('appointment_post') }}" class="form" data-loading id="bookForm">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+      <fieldset><legend>Patient details</legend>
+        <div class="row2"><div><label for="patient_name">Full name</label><input id="patient_name" name="patient_name" value="{{ form.patient_name }}" required maxlength="160"></div>
+        <div><label for="patient_phone">Mobile number</label><input id="patient_phone" name="patient_phone" type="tel" inputmode="tel" value="{{ form.patient_phone }}" required maxlength="16" placeholder="10 digits"></div></div>
+        <label for="patient_email">Email</label><input id="patient_email" name="patient_email" type="email" value="{{ form.patient_email }}" required>
+      </fieldset>
+      <fieldset><legend>Appointment details</legend>
+        <label for="doctor_specialty">Specialty</label>
+        <select id="doctor_specialty" name="doctor_specialty" required><option value="">Choose a specialty…</option>
+          {% for s in specialties %}<option value="{{ s.slug }}" {% if form.doctor_specialty == s.slug %}selected{% endif %}>{{ s.icon }} {{ s.name }} - {{ s.subtitle }}</option>{% endfor %}</select>
+        <p class="hint">Not sure? <a href="{{ url_for('chatbot') }}">Ask the AI assistant</a> or <a href="{{ url_for('specialization') }}">see which doctor treats what</a>.</p>
+        <div class="row2"><div><label for="appointment_date">Date</label><input id="appointment_date" name="appointment_date" type="date" min="{{ min_date }}" max="{{ max_date }}" value="{{ form.appointment_date or '' }}" required></div>
+        <div><label for="appointment_time">Time</label><select id="appointment_time" name="appointment_time" required><option value="">Choose a time…</option>
+          {% for t in slots %}<option value="{{ t }}" {% if form.appointment_time == t %}selected{% endif %}>{{ t }}</option>{% endfor %}</select></div></div>
+        <label for="reason">Reason for visit</label><textarea id="reason" name="reason" rows="3" maxlength="500" required placeholder="Briefly describe your concern">{{ form.reason or '' }}</textarea>
+      </fieldset>
+      <div class="btn-row"><button class="btn btn-primary" type="submit">Confirm appointment</button><a class="btn btn-ghost" href="{{ url_for('my_appointments') }}">My appointments</a></div>
+    </form>
+  </div>
+</div></section>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='js/appointments.js') }}"></script>{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}{% block title %}Emergency Help{% endblock %}
+{% block content %}
+<section class="section"><div class="container narrow-lg">
+  <h1>🚑 Emergency assistance</h1>
+  <div class="alert alert-danger" role="alert"><b>If someone's life is in danger, call now. Do not wait for an online answer.</b></div>
+  <div class="grid cols-2">
+    <a class="card emg" href="tel:{{ emergency_number }}"><span class="emg-num">{{ emergency_number }}</span><span>National emergency number</span></a>
+    <a class="card emg" href="tel:{{ ambulance_number }}"><span class="emg-num">{{ ambulance_number }}</span><span>Ambulance</span></a>
+    {% for label, number in extra %}<a class="card emg" href="tel:{{ number }}"><span class="emg-num">{{ number }}</span><span>{{ label }}</span></a>{% endfor %}
+  </div>
+  <p class="muted small">Numbers can be changed for your region in the <code>.env</code> file.</p>
+  <div class="card gap-top"><h2>Call for emergency help if there is…</h2><ul>
+    <li>Chest pain or pressure, or sudden trouble breathing</li><li>Signs of stroke: face drooping, arm weakness, slurred speech</li><li>Heavy bleeding that will not stop</li><li>Fainting, unconsciousness or a seizure</li><li>Severe allergic reaction, poisoning or choking</li><li>Thoughts of harming yourself</li></ul></div>
+  <div class="card gap-top"><h2>While waiting for help</h2><ul><li>Stay calm and stay with the person.</li><li>Tell the operator your exact location and what happened.</li><li>Do not give food or drink to someone who is unconscious.</li><li>Unlock the door and have someone wait outside to guide the ambulance.</li></ul></div>
+  <p class="center gap-top"><a class="btn btn-primary" href="{{ url_for('hospital_finder') }}">🏥 Find nearby hospitals</a></p>
+</div></section>
+{% endblock %}

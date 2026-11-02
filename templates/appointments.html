@@ -1,0 +1,28 @@
+{% extends "base.html" %}{% block title %}My Appointments{% endblock %}
+{% block content %}
+<section class="section"><div class="container">
+  <div class="card-head"><h1>My appointments</h1><a class="btn btn-primary" href="{{ url_for('appointment') }}">+ New appointment</a></div>
+  <h2>Upcoming</h2>
+  {% if upcoming %}<div class="grid cols-2">
+    {% for a in upcoming %}
+    <article class="card"><div class="card-head"><h3>{{ a.specialty_name }}</h3><span class="pill pill-upcoming">Upcoming</span></div>
+      <p><b>{{ a.display_date }}</b> at <b>{{ a.display_time }}</b></p><p class="muted">{{ a.reason }}</p>
+      <div class="btn-row">
+        <button class="btn btn-outline btn-sm" type="button" data-resched="r{{ a.id }}">Reschedule</button>
+        <form method="post" action="{{ url_for('cancel_appointment', appt_id=a.id) }}" class="inline-form" data-confirm="Cancel this appointment?"><input type="hidden" name="csrf_token" value="{{ csrf_token() }}"><button class="btn btn-danger btn-sm" type="submit">Cancel</button></form>
+      </div>
+      <form method="post" action="{{ url_for('reschedule_appointment', appt_id=a.id) }}" class="form resched" id="r{{ a.id }}" hidden>
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <div class="row2"><div><label for="d{{ a.id }}">New date</label><input id="d{{ a.id }}" name="appointment_date" type="date" min="{{ min_date }}" max="{{ max_date }}" required value="{{ a.appointment_date }}"></div>
+        <div><label for="t{{ a.id }}">New time</label><select id="t{{ a.id }}" name="appointment_time" required>{% for t in slots %}<option value="{{ t }}" {% if t == a.appointment_time %}selected{% endif %}>{{ t }}</option>{% endfor %}</select></div></div>
+        <button class="btn btn-primary btn-sm" type="submit">Save new time</button>
+      </form>
+    </article>{% endfor %}
+  </div>{% else %}<div class="card"><p class="muted">You have no upcoming appointments.</p></div>{% endif %}
+  <h2 class="gap-top">History</h2>
+  {% if history %}<div class="card table-wrap"><table><thead><tr><th>Specialty</th><th>Date</th><th>Time</th><th>Reason</th><th>Status</th></tr></thead><tbody>
+    {% for a in history %}<tr><td>{{ a.specialty_name }}</td><td>{{ a.display_date }}</td><td>{{ a.display_time }}</td><td>{{ a.reason }}</td><td><span class="pill pill-{{ a.state }}">{{ a.state|capitalize }}</span></td></tr>{% endfor %}
+  </tbody></table></div>{% else %}<div class="card"><p class="muted">Past and cancelled appointments will show here.</p></div>{% endif %}
+</div></section>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='js/appointments.js') }}"></script>{% endblock %}

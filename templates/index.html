@@ -1,0 +1,48 @@
+{% extends "base.html" %}{% block title %}Home{% endblock %}
+{% block content %}
+<section class="hero"><div class="container hero-grid">
+  <div>
+    <p class="eyebrow">Your friendly health companion</p>
+    <h1>Understand your health. Find the right doctor. Book with ease.</h1>
+    <p class="lead">Ask our AI assistant in English, Hindi or Marathi, look up medicines, find nearby hospitals and manage your appointments in one place.</p>
+    <div class="btn-row">
+      <a class="btn btn-primary btn-lg" href="{{ url_for('chatbot') }}">💬 Talk to the AI assistant</a>
+      <a class="btn btn-outline btn-lg" href="{{ url_for('appointment') }}">📅 Book an appointment</a>
+    </div>
+    <p class="muted small">The assistant gives general information only. It does not diagnose or prescribe.</p>
+  </div>
+  <div class="hero-card card"><h2>🚑 In an emergency</h2><p>Call <b>{{ emergency_number }}</b> or ambulance <b>{{ ambulance_number }}</b> immediately.</p><a class="btn btn-danger" href="{{ url_for('emergency') }}">See emergency help</a></div>
+</div></section>
+
+<section class="section"><div class="container">
+  <h2 class="section-title">What would you like to do?</h2>
+  <div class="grid cols-3">
+    {% for icon, title, text, ep in [
+      ('🤖','AI Health Chat','Ask health questions and learn which specialist to see.','chatbot'),
+      ('📅','Appointments','Book, reschedule or cancel in a few taps.','appointment'),
+      ('👨‍⚕️','Doctor Specialties','Find out which doctor handles which problem.','specialization'),
+      ('💊','Medicine Information','Uses, side effects and precautions in plain words.','medicine_info'),
+      ('🏥','Hospital Finder','Find hospitals near you and get directions.','hospital_finder'),
+      ('🌿','Health Tips &amp; Articles','Daily tips and simple awareness articles.','health_hub')] %}
+    <a class="card feature" href="{{ url_for(ep) }}"><span class="feature-icon" aria-hidden="true">{{ icon }}</span><h3>{{ title|safe }}</h3><p>{{ text }}</p></a>
+    {% endfor %}
+  </div>
+</div></section>
+
+<section class="section alt"><div class="container">
+  <h2 class="section-title">Popular specialties</h2>
+  <div class="grid cols-3">
+    {% for s in specialties %}<a class="card" href="{{ url_for('specialization') }}#{{ s.slug }}"><h3><span aria-hidden="true">{{ s.icon }}</span> {{ s.name }}</h3><p class="muted">{{ s.subtitle }}</p></a>{% endfor %}
+  </div>
+  <p class="center"><a class="btn btn-ghost" href="{{ url_for('specialization') }}">View all specialties →</a></p>
+</div></section>
+
+<section class="section"><div class="container narrow">
+  <h2 class="section-title">How it works</h2>
+  <ol class="steps">
+    <li><b>Create a free account</b><span>Your appointments and chat history stay private to you.</span></li>
+    <li><b>Ask or search</b><span>Describe how you feel, or look up a medicine or hospital.</span></li>
+    <li><b>Book and manage</b><span>Pick a specialty, date and time. Get a confirmation and reminders in your notifications.</span></li>
+  </ol>
+</div></section>
+{% endblock %}

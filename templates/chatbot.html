@@ -1,0 +1,26 @@
+{% extends "base.html" %}{% block title %}AI Health Chat{% endblock %}
+{% block content %}
+<section class="section"><div class="container narrow-lg">
+  <div class="chat card" id="chat" data-logged-in="{{ 'true' if logged_in else 'false' }}" data-csrf="{{ csrf_token() }}" data-api="{{ url_for('api_chat') }}" data-history="{{ url_for('chat_history') }}" data-emg="{{ emergency_number }}" data-amb="{{ ambulance_number }}">
+    <div class="chat-top">
+      <div><h1 class="chat-title">🤖 AI Health Assistant</h1><p class="muted small" id="chatSub">General health information only - no diagnosis or prescriptions.</p></div>
+      <div class="chat-tools">
+        <label class="sr-only" for="langSelect">Language</label>
+        <select id="langSelect"><option value="en">English</option><option value="hi">हिन्दी</option><option value="mr">मराठी</option></select>
+        <button class="btn btn-outline btn-sm" id="clearChat" type="button">🗑 Clear</button>
+      </div>
+    </div>
+    <div class="chat-disclaimer" id="chatDisclaimer" role="note">⚠️ In an emergency call <b>{{ emergency_number }}</b> / <b>{{ ambulance_number }}</b>. This assistant cannot diagnose or prescribe.</div>
+    <div class="chat-log" id="chatLog" role="log" aria-live="polite" aria-label="Conversation"></div>
+    <div class="quick-replies" id="quickReplies" aria-label="Suggested questions"></div>
+    <form class="chat-form" id="chatForm" autocomplete="off">
+      <label class="sr-only" for="chatInput">Type your question</label>
+      <input id="chatInput" maxlength="1000" placeholder="Type your health question…" required>
+      <button type="button" class="icon-btn mic" id="micBtn" aria-label="Speak your question" hidden>🎤</button>
+      <button class="btn btn-primary" id="sendBtn" type="submit">Send</button>
+    </form>
+  </div>
+  {% if not logged_in %}<p class="muted small center"><a href="{{ url_for('login') }}">Log in</a> to save your chat history across devices.</p>{% endif %}
+</div></section>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='js/chatbot.js') }}"></script>{% endblock %}

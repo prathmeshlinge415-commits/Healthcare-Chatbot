@@ -1,0 +1,28 @@
+{% extends "base.html" %}{% block title %}My Profile{% endblock %}
+{% block content %}
+<section class="section"><div class="container narrow-lg">
+  <h1>My profile</h1>
+  <form method="post" action="{{ url_for('profile_post') }}" class="card form" data-loading>
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"><h2>Personal information</h2>
+    <div class="row2"><div><label for="first_name">First name</label><input id="first_name" name="first_name" value="{{ user.first_name }}" required maxlength="80"></div><div><label for="last_name">Last name</label><input id="last_name" name="last_name" value="{{ user.last_name }}" required maxlength="80"></div></div>
+    <label for="email_ro">Email <span class="muted">(cannot be changed)</span></label><input id="email_ro" value="{{ user.email }}" disabled>
+    <div class="row2"><div><label for="phone">Mobile number</label><input id="phone" name="phone" type="tel" value="{{ user.phone or '' }}" maxlength="16"></div><div><label for="date_of_birth">Date of birth</label><input id="date_of_birth" name="date_of_birth" type="date" max="{{ year }}-12-31" value="{{ user.date_of_birth or '' }}"></div></div>
+    <div class="row3"><div><label for="gender">Gender</label><select id="gender" name="gender"><option value="">Select…</option>{% for g in genders %}<option value="{{ g }}" {% if user.gender == g %}selected{% endif %}>{{ g|replace('-', ' ')|capitalize }}</option>{% endfor %}</select></div>
+    <div><label for="blood_group">Blood group</label><select id="blood_group" name="blood_group"><option value="">Select…</option>{% for b in blood_groups %}<option {% if user.blood_group == b %}selected{% endif %}>{{ b }}</option>{% endfor %}</select></div>
+    <div><label for="city">City</label><input id="city" name="city" value="{{ user.city or '' }}" maxlength="100"></div></div>
+    <h2>Emergency contact</h2>
+    <div class="row2"><div><label for="emergency_contact_name">Name</label><input id="emergency_contact_name" name="emergency_contact_name" value="{{ user.emergency_contact_name or '' }}" maxlength="120"></div><div><label for="emergency_contact_phone">Phone</label><input id="emergency_contact_phone" name="emergency_contact_phone" type="tel" value="{{ user.emergency_contact_phone or '' }}" maxlength="16"></div></div>
+    <button class="btn btn-primary" type="submit">Save changes</button>
+  </form>
+  <form method="post" action="{{ url_for('change_password') }}" class="card form gap-top" id="security" data-loading>
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"><h2>Change password</h2>
+    <label for="current_password">Current password</label><input id="current_password" name="current_password" type="password" autocomplete="current-password" required>
+    <div class="row2"><div><label for="new_password">New password</label><input id="new_password" name="new_password" type="password" autocomplete="new-password" required minlength="8"></div><div><label for="confirm_password">Confirm new password</label><input id="confirm_password" name="confirm_password" type="password" autocomplete="new-password" required minlength="8"></div></div>
+    <p class="hint">At least 8 characters with a letter and a number.</p>
+    <button class="btn btn-primary" type="submit">Update password</button>
+  </form>
+  <div class="card gap-top"><h2>Appointments &amp; session</h2><p class="muted">View your upcoming and past appointments, or log out of this device.</p>
+    <div class="btn-row"><a class="btn btn-outline" href="{{ url_for('my_appointments') }}">View appointment history</a>
+    <form method="post" action="{{ url_for('logout') }}" class="inline-form"><input type="hidden" name="csrf_token" value="{{ csrf_token() }}"><button class="btn btn-danger" type="submit">Log out</button></form></div></div>
+</div></section>
+{% endblock %}

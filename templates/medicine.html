@@ -1,0 +1,27 @@
+{% extends "base.html" %}{% block title %}Medicine Information{% endblock %}
+{% block content %}
+<section class="section"><div class="container">
+  <h1>Medicine information</h1>
+  <div class="alert alert-warning" role="note"><b>Medical disclaimer:</b> This is general education only. It is not a prescription or a recommendation to take any medicine. Doses depend on age, weight, health conditions and other medicines, so no doses are shown here. Never start, stop or change a medicine without asking a doctor or pharmacist. Medicines marked <b>Rx</b> are normally available only on a doctor's prescription.</div>
+  <form class="search-bar" method="get" action="{{ url_for('medicine_info') }}" role="search">
+    <label class="sr-only" for="medicineSearch">Search medicines</label>
+    <input id="medicineSearch" name="q" value="{{ q }}" list="medSuggest" placeholder="Search by name or use, e.g. Paracetamol, allergy" autocomplete="off" data-suggest="{{ url_for('api_medicine_suggest') }}">
+    <datalist id="medSuggest"></datalist>
+    <button class="btn btn-primary" type="submit">Search</button>
+  </form>
+  <p class="muted" id="medCount" aria-live="polite">Showing {{ medicines|length }} of {{ total }} medicines</p>
+  <div class="grid cols-2" id="medicineGrid">
+    {% for m in medicines %}
+    <article class="card med" data-search="{{ (m.name ~ ' ' ~ m.type ~ ' ' ~ m.uses)|lower }}">
+      <div class="card-head"><div><h3>{{ m.name }}</h3><span class="muted small">{{ m.type }}</span></div>{% if m.prescription_only %}<span class="pill pill-rx" title="Usually needs a prescription">Rx</span>{% else %}<span class="pill pill-upcoming" title="Often available without prescription">OTC</span>{% endif %}</div>
+      <h4>Common uses</h4><p>{{ m.uses }}</p>
+      <h4>Common side effects</h4><ul>{% for s in m.side_effects %}<li>{{ s }}</li>{% endfor %}</ul>
+      <h4>Precautions</h4><ul>{% for s in m.precautions %}<li>{{ s }}</li>{% endfor %}</ul>
+      <p class="small muted">Ask your doctor or pharmacist about the right dose for you.</p>
+    </article>
+    {% endfor %}
+  </div>
+  <div class="card center hidden-empty" id="medEmpty" {% if medicines %}hidden{% endif %}><h3>No medicines found</h3><p class="muted">Try a different spelling or <a href="{{ url_for('chatbot') }}">ask the AI assistant</a>.</p></div>
+</div></section>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='js/medicine.js') }}"></script>{% endblock %}

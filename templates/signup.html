@@ -1,0 +1,22 @@
+{% extends "base.html" %}{% block title %}Sign up{% endblock %}
+{% block content %}
+<section class="section"><div class="container auth-wrap">
+  <div class="card auth-card">
+    <h1>Create your account</h1><p class="muted">It's free and takes less than a minute.</p>
+    <form method="post" action="{{ url_for('signup_post') }}" class="form" data-loading>
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+      <div class="row2"><div><label for="firstName">First name</label><input id="firstName" name="firstName" value="{{ form.get('firstName','') }}" autocomplete="given-name" required maxlength="80"></div>
+      <div><label for="lastName">Last name</label><input id="lastName" name="lastName" value="{{ form.get('lastName','') }}" autocomplete="family-name" required maxlength="80"></div></div>
+      <label for="email">Email</label><input id="email" name="email" type="email" value="{{ form.get('email','') }}" autocomplete="email" required>
+      <label for="phone">Mobile number <span class="muted">(optional)</span></label><input id="phone" name="phone" type="tel" value="{{ form.get('phone','') }}" autocomplete="tel" inputmode="tel" maxlength="16" placeholder="10 digits">
+      <label for="password">Password</label>
+      <div class="pw-wrap"><input id="password" name="password" type="password" autocomplete="new-password" required minlength="8"><button type="button" class="pw-toggle" data-toggle-pw="password" aria-label="Show password">👁</button></div>
+      <p class="hint">At least 8 characters with a letter and a number.</p>
+      <label for="confirmPassword">Confirm password</label><input id="confirmPassword" name="confirmPassword" type="password" autocomplete="new-password" required minlength="8">
+      <label class="check"><input type="checkbox" name="terms" required> I understand this site gives general information and is not medical advice.</label>
+      <button class="btn btn-primary btn-block" type="submit">Create account</button>
+    </form>
+    <p class="muted center">Already registered? <a href="{{ url_for('login') }}">Log in</a></p>
+  </div>
+</div></section>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "base.html" %}{% block title %}Dashboard{% endblock %}
+{% macro appt_row(a) %}
+<li class="appt"><div><b>{{ a.specialty_name }}</b><br><span class="muted">{{ a.display_date }} · {{ a.display_time }}</span></div><span class="pill pill-{{ a.state }}">{{ a.state|capitalize }}</span></li>
+{% endmacro %}
+{% block content %}
+<section class="section"><div class="container">
+  <h1>Hello, {{ user.first_name }} 👋</h1>
+  <p class="muted">Here is a quick look at your health space.</p>
+  <div class="grid cols-3 quick">
+    <a class="card feature" href="{{ url_for('chatbot') }}"><span class="feature-icon">💬</span><h3>Chat with AI</h3><p>Ask a health question</p></a>
+    <a class="card feature" href="{{ url_for('appointment') }}"><span class="feature-icon">📅</span><h3>Book appointment</h3><p>Choose specialty &amp; time</p></a>
+    <a class="card feature" href="{{ url_for('medicine_info') }}"><span class="feature-icon">💊</span><h3>Medicine info</h3><p>Search uses &amp; precautions</p></a>
+  </div>
+  <div class="grid cols-2 gap-top">
+    <div class="card"><div class="card-head"><h2>Upcoming appointments</h2><a href="{{ url_for('my_appointments') }}">Manage →</a></div>
+      {% if upcoming %}<ul class="plain">{% for a in upcoming %}{{ appt_row(a) }}{% endfor %}</ul>
+      {% else %}<p class="muted">No upcoming appointments.</p><a class="btn btn-primary btn-sm" href="{{ url_for('appointment') }}">Book one now</a>{% endif %}
+    </div>
+    <div class="card"><div class="card-head"><h2>Recent history</h2></div>
+      {% if past %}<ul class="plain">{% for a in past %}{{ appt_row(a) }}{% endfor %}</ul>{% else %}<p class="muted">Your past and cancelled appointments will appear here.</p>{% endif %}
+    </div>
+    <div class="card"><div class="card-head"><h2>My profile</h2><a href="{{ url_for('profile') }}">Edit →</a></div>
+      <dl class="kv"><dt>Name</dt><dd>{{ user.first_name }} {{ user.last_name }}</dd><dt>Email</dt><dd>{{ user.email }}</dd><dt>Phone</dt><dd>{{ user.phone or 'Not added' }}</dd><dt>City</dt><dd>{{ user.city or 'Not added' }}</dd></dl>
+    </div>
+    <div class="card"><div class="card-head"><h2>Notifications</h2><a href="{{ url_for('notifications') }}">All →</a></div>
+      {% if notes %}<ul class="plain">{% for n in notes %}<li><b>{{ n.title }}</b>{% if not n.is_read %} <span class="pill pill-upcoming">New</span>{% endif %}<br><span class="muted small">{{ n.body }}</span></li>{% endfor %}</ul>{% else %}<p class="muted">Nothing new.</p>{% endif %}
+    </div>
+    <div class="card tip"><h2>🌿 Today's health tip</h2><p>{{ tip.en }}</p></div>
+    <div class="card info"><h2>⚠️ Important information</h2><ul><li>For emergencies call <b>{{ emergency_number }}</b> or <b>{{ ambulance_number }}</b>.</li><li>This site gives general information, not a diagnosis.</li><li>Always confirm medicines and doses with your doctor or pharmacist.</li></ul></div>
+  </div>
+  <h2 class="gap-top">Read &amp; learn</h2>
+  <div class="grid cols-3">{% for a in articles %}<a class="card" href="{{ url_for('article', slug=a.slug) }}"><h3>{{ a.title }}</h3><p class="muted">{{ a.summary }}</p></a>{% endfor %}</div>
+</div></section>
+{% endblock %}

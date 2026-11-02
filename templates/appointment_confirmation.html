@@ -1,0 +1,9 @@
+{% extends "base.html" %}{% block title %}Appointment confirmed{% endblock %}
+{% block content %}
+<section class="section"><div class="container narrow center">
+  <div class="card"><div class="success-mark" aria-hidden="true">✓</div><h1>Appointment confirmed</h1>
+  <dl class="kv center-kv"><dt>Reference</dt><dd>#{{ a.id }}</dd><dt>Specialty</dt><dd>{{ a.specialty_name }}</dd><dt>Date</dt><dd>{{ a.display_date }}</dd><dt>Time</dt><dd>{{ a.display_time }}</dd><dt>Patient</dt><dd>{{ a.patient_name }}</dd><dt>Reason</dt><dd>{{ a.reason }}</dd></dl>
+  <p class="muted small">Please arrive 10 minutes early. A notification has been added to your account.</p>
+  <div class="btn-row center-row"><a class="btn btn-primary" href="{{ url_for('my_appointments') }}">Manage appointments</a><a class="btn btn-ghost" href="{{ url_for('dashboard') }}">Dashboard</a></div></div>
+</div></section>
+{% endblock %}

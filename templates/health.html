@@ -1,0 +1,9 @@
+{% extends "base.html" %}{% block title %}Health Tips &amp; Articles{% endblock %}
+{% block content %}
+<section class="section"><div class="container">
+  <h1>Health tips &amp; articles</h1>
+  <div class="card tip"><h2>🌿 Tip of the day</h2><p>{{ tip.en }}</p><p lang="hi">{{ tip.hi }}</p><p lang="mr">{{ tip.mr }}</p></div>
+  <h2 class="gap-top">Awareness articles</h2>
+  <div class="grid cols-3">{% for a in articles %}<a class="card" href="{{ url_for('article', slug=a.slug) }}"><h3>{{ a.title }}</h3><p class="muted">{{ a.summary }}</p><span class="small">Read more →</span></a>{% endfor %}</div>
+</div></section>
+{% endblock %}

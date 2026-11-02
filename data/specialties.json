@@ -1,0 +1,191 @@
+[
+ {
+  "slug": "cardiologist",
+  "icon": "❤️",
+  "name": "Cardiologist",
+  "subtitle": "Heart & Cardiovascular Specialist",
+  "description": "Specialized in diagnosing and treating heart conditions, blood pressure, and cardiovascular diseases.",
+  "conditions": [
+   "Heart Disease",
+   "Hypertension",
+   "Arrhythmia"
+  ],
+  "also_for": [
+   "chest discomfort",
+   "high blood pressure",
+   "palpitations",
+   "cholesterol",
+   "heart check-up",
+   "breathlessness on walking"
+  ]
+ },
+ {
+  "slug": "dermatologist",
+  "icon": "🧴",
+  "name": "Dermatologist",
+  "subtitle": "Skin, Hair & Nails Specialist",
+  "description": "Expert in treating skin conditions, acne, hair loss, and cosmetic dermatology procedures.",
+  "conditions": [
+   "Acne",
+   "Eczema",
+   "Hair Loss"
+  ],
+  "also_for": [
+   "skin rash",
+   "itching",
+   "pimples",
+   "dandruff",
+   "hair fall",
+   "fungal infection",
+   "allergy on skin",
+   "moles"
+  ]
+ },
+ {
+  "slug": "neurologist",
+  "icon": "🧠",
+  "name": "Neurologist",
+  "subtitle": "Brain & Nervous System Specialist",
+  "description": "Specialized in disorders of the brain, spinal cord, and nervous system including migraines and epilepsy.",
+  "conditions": [
+   "Migraine",
+   "Epilepsy",
+   "Stroke"
+  ],
+  "also_for": [
+   "headache",
+   "dizziness",
+   "numbness",
+   "tingling",
+   "memory problems",
+   "tremors",
+   "fits"
+  ]
+ },
+ {
+  "slug": "pediatrician",
+  "icon": "👶",
+  "name": "Pediatrician",
+  "subtitle": "Children's Health Specialist",
+  "description": "Dedicated to the health care of infants, children, and adolescents with comprehensive care.",
+  "conditions": [
+   "Child Health",
+   "Vaccinations",
+   "Growth Issues"
+  ],
+  "also_for": [
+   "child fever",
+   "baby feeding",
+   "vaccination",
+   "child cough",
+   "growth",
+   "newborn care"
+  ]
+ },
+ {
+  "slug": "orthopedic",
+  "icon": "🦴",
+  "name": "Orthopedic Surgeon",
+  "subtitle": "Bone & Joint Specialist",
+  "description": "Expert in treating musculoskeletal system disorders, including bones, joints, ligaments, and tendons.",
+  "conditions": [
+   "Fractures",
+   "Arthritis",
+   "Sports Injuries"
+  ],
+  "also_for": [
+   "knee pain",
+   "back pain",
+   "joint pain",
+   "neck pain",
+   "shoulder pain",
+   "broken bone",
+   "sprain",
+   "hip pain"
+  ]
+ },
+ {
+  "slug": "dentist",
+  "icon": "🦷",
+  "name": "Dentist",
+  "subtitle": "Oral Health Specialist",
+  "description": "Specialized in dental care, oral hygiene, teeth cleaning, and cosmetic dental procedures.",
+  "conditions": [
+   "Tooth Decay",
+   "Gum Disease",
+   "Dental Care"
+  ],
+  "also_for": [
+   "toothache",
+   "bleeding gums",
+   "cavity",
+   "bad breath",
+   "braces",
+   "wisdom tooth"
+  ]
+ },
+ {
+  "slug": "ophthalmologist",
+  "icon": "👁️",
+  "name": "Ophthalmologist",
+  "subtitle": "Eye Care Specialist",
+  "description": "Expert in eye health, vision care, eye surgery, and treatment of eye diseases.",
+  "conditions": [
+   "Cataracts",
+   "Glaucoma",
+   "Vision Problems"
+  ],
+  "also_for": [
+   "blurred vision",
+   "eye pain",
+   "red eyes",
+   "spectacles",
+   "dry eyes",
+   "watering eyes"
+  ]
+ },
+ {
+  "slug": "general",
+  "icon": "🩺",
+  "name": "General Physician",
+  "subtitle": "Primary Care Specialist",
+  "description": "Provides comprehensive primary care for common illnesses, health checkups, and preventive care.",
+  "conditions": [
+   "Fever",
+   "Cold & Flu",
+   "Check-ups"
+  ],
+  "also_for": [
+   "fever",
+   "cold",
+   "cough",
+   "sore throat",
+   "body ache",
+   "stomach upset",
+   "weakness",
+   "first check-up",
+   "not sure which doctor"
+  ]
+ },
+ {
+  "slug": "psychiatrist",
+  "icon": "🧘",
+  "name": "Psychiatrist",
+  "subtitle": "Mental Health Specialist",
+  "description": "Specialized in mental health disorders, therapy, counseling, and psychiatric medications.",
+  "conditions": [
+   "Depression",
+   "Anxiety",
+   "Stress"
+  ],
+  "also_for": [
+   "anxiety",
+   "sleep problems",
+   "low mood",
+   "panic",
+   "stress",
+   "overthinking",
+   "addiction"
+  ]
+ }
+]

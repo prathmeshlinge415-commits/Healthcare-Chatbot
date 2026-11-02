@@ -1,0 +1,36 @@
+{% extends "base.html" %}{% block title %}Doctor Specialties{% endblock %}
+{% block content %}
+<section class="section"><div class="container">
+  <h1>Which doctor should I see?</h1>
+  <p class="muted">Find the specialist who treats your concern. Not sure? Start with a General Physician - they can guide you further.</p>
+  <form class="search-bar" role="search" onsubmit="return false"><label class="sr-only" for="specSearch">Search specialties or conditions</label>
+    <input id="specSearch" placeholder="Search a specialty or concern, e.g. skin, knee pain, anxiety" autocomplete="off"></form>
+  <p class="muted" id="specCount" aria-live="polite"></p>
+  <div class="grid cols-3" id="specGrid">
+    {% for s in specialties %}
+    <article class="card spec" id="{{ s.slug }}" data-search="{{ (s.name ~ ' ' ~ s.subtitle ~ ' ' ~ s.description ~ ' ' ~ s.conditions|join(' ') ~ ' ' ~ s.also_for|join(' '))|lower }}">
+      <h3><span aria-hidden="true">{{ s.icon }}</span> {{ s.name }}</h3><p class="muted small">{{ s.subtitle }}</p>
+      <p>{{ s.description }}</p>
+      <p class="small"><b>Commonly consulted for:</b></p><div class="tags">{% for c in s.conditions %}<span class="tag">{{ c }}</span>{% endfor %}</div>
+      <p class="small muted">Also for: {{ s.also_for|join(', ') }}</p>
+      <p class="small muted">Registered doctors in our records: <b>{{ counts.get(s.slug, 0) }}</b></p>
+      <div class="btn-row"><a class="btn btn-primary btn-sm" href="{{ url_for('appointment', specialty=s.slug) }}">Book appointment</a>
+      <button class="btn btn-outline btn-sm" type="button" data-doctors="{{ s.slug }}" data-name="{{ s.name }}">View doctors</button></div>
+    </article>{% endfor %}
+  </div>
+  <div class="card center" id="specEmpty" hidden><h3>No match</h3><p class="muted">Try another word, or <a href="{{ url_for('chatbot') }}">ask the AI assistant</a>.</p></div>
+
+  <dialog id="doctorsDialog" class="dialog" aria-labelledby="dlgTitle"><div class="card-head"><h2 id="dlgTitle">Doctors</h2><button class="icon-btn" type="button" id="dlgClose" aria-label="Close">×</button></div><div id="doctorsList" aria-live="polite"></div></dialog>
+
+  {% if is_admin %}
+  <section class="card gap-top" id="adminDoctor"><h2>Admin: register a doctor</h2>
+    <form id="doctorForm" class="form" data-csrf="{{ csrf_token() }}" data-url="{{ url_for('api_create_doctor') }}">
+      <div class="row2"><div><label for="d_first">First name</label><input id="d_first" required maxlength="80"></div><div><label for="d_last">Last name</label><input id="d_last" maxlength="80"></div></div>
+      <div class="row2"><div><label for="d_spec">Specialty</label><select id="d_spec" required>{% for s in specialties %}<option value="{{ s.slug }}">{{ s.name }}</option>{% endfor %}</select></div><div><label for="d_exp">Experience (years)</label><input id="d_exp" type="number" min="0" max="70" value="0"></div></div>
+      <div class="row2"><div><label for="d_email">Email</label><input id="d_email" type="email"></div><div><label for="d_phone">Phone</label><input id="d_phone" type="tel"></div></div>
+      <label for="d_qual">Qualifications</label><input id="d_qual" maxlength="255">
+      <button class="btn btn-primary" type="submit">Add doctor</button> <span id="doctorMsg" role="status"></span>
+    </form></section>{% endif %}
+</div></section>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='js/specialization.js') }}"></script>{% endblock %}
